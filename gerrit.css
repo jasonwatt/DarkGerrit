@@ -1170,19 +1170,19 @@ div.net-codemirror-lib-CodeMirror-Style-activeLine div.CodeMirror-linenumber {
     color:            #555;
 }
 
-.com-google-gerrit-client-diff-DiffTable_BinderImpl_GenCss_style-a .com-google-gerrit-client-diff-DiffTable_BinderImpl_GenCss_style-intralineBg {
+.com-google-gerrit-client-diff-DiffTable_BinderImpl_GenCss_style-dark .com-google-gerrit-client-diff-DiffTable_BinderImpl_GenCss_style-a .com-google-gerrit-client-diff-DiffTable_BinderImpl_GenCss_style-intralineBg {
     background: #403030 !important;
 }
 
-.com-google-gerrit-client-diff-DiffTable_BinderImpl_GenCss_style-a .com-google-gerrit-client-diff-DiffTable_BinderImpl_GenCss_style-diff {
+.com-google-gerrit-client-diff-DiffTable_BinderImpl_GenCss_style-dark .com-google-gerrit-client-diff-DiffTable_BinderImpl_GenCss_style-a .com-google-gerrit-client-diff-DiffTable_BinderImpl_GenCss_style-diff {
     background: #8F4A4A !important;
 }
 
-.com-google-gerrit-client-diff-DiffTable_BinderImpl_GenCss_style-b .com-google-gerrit-client-diff-DiffTable_BinderImpl_GenCss_style-intralineBg {
+.com-google-gerrit-client-diff-DiffTable_BinderImpl_GenCss_style-dark .com-google-gerrit-client-diff-DiffTable_BinderImpl_GenCss_style-b .com-google-gerrit-client-diff-DiffTable_BinderImpl_GenCss_style-intralineBg {
     background: #384538 !important;
 }
 
-.com-google-gerrit-client-diff-DiffTable_BinderImpl_GenCss_style-b .com-google-gerrit-client-diff-DiffTable_BinderImpl_GenCss_style-diff {
+.com-google-gerrit-client-diff-DiffTable_BinderImpl_GenCss_style-dark .com-google-gerrit-client-diff-DiffTable_BinderImpl_GenCss_style-b .com-google-gerrit-client-diff-DiffTable_BinderImpl_GenCss_style-diff {
     background: #278000 !important;
 }
 
