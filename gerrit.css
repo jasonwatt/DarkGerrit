@@ -54,6 +54,8 @@ a:visited {
     color: #86BFFC;
 }
 
+
+
 div.menuBarUserNamePanel {
     background-color: #333 !important;
     background-image: linear-gradient(#444, #222) !important;
@@ -587,7 +589,7 @@ td.sectionHeader,
 table.changeTable.accountDashboard td.sectionHeader:last-child {
     background:   #333 !important;
     border-right: 0 !important;
-    border-top:   10px solid #333 !important;
+    border-top:   10px solid #111 !important;
     padding:      0 !important;
     position:     relative;
     color:        #EEE !important;
@@ -595,12 +597,17 @@ table.changeTable.accountDashboard td.sectionHeader:last-child {
 }
 
 td.sectionHeader a {
-    background-color: #F8F8F8 !important;
-    border:           1px solid #E5E5E5 !important;
+    background-color: #222 !important;
+    border-bottom: 1px solid #555 !important;
+    border-top: 1px solid #555 !important;
     border-radius:    3px 3px 0 0;
     display:          block;
-    font-weight:      bold;
     padding:          12px 10px;
+}
+
+td.emptySection {
+    border: 1px solid #333 !important;
+    border-top: 0px !important;
 }
 
 td.cSUBJECT a {
