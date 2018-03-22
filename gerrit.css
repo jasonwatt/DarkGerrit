@@ -1,5 +1,5 @@
 /*
- * DarkGerrit v1.0.2
+ * DarkGerrit v1.1.0
  *
  * Created by Jason Watt <jasoncwatt@gmail.com>
  * https://github.com/jasonwatt/DarkGerrit
@@ -33,7 +33,7 @@ body {
 }
 
 .gwt-TabBar .gwt-TabBarRest {
-    background: transparent!important;
+    background: transparent !important;
 }
 
 body,
@@ -43,7 +43,7 @@ a {
 }
 
 table td {
-    font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, 'FontAwesome', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !important;
+    font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, 'FontAwesome', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 a {
@@ -99,10 +99,6 @@ select option:after {
     font-family:  'FontAwesome';
     font-size:    14px;
     padding-left: 10px;
-}
-
-table.screenHeader {
-    display: block !important;
 }
 
 #gerrit_btmmenu {
@@ -290,6 +286,10 @@ div.searchPanel input.gwt-TextBox {
     padding:     0;
 }
 
+.menuScreenMenuBar {
+    background: #222;
+}
+
 .menuScreenMenuBar .menuItem.activeRow, .menuItem.activeRow {
     background:            #4078C0;
     color:                 #FFF !important;
@@ -340,16 +340,16 @@ div.menuBarUserNamePanel {
 }
 
 .com-google-gerrit-client-change-RelatedChanges-RelatedChangesCss-tabPanel .gwt-TabBarItem {
-    margin: 0 1px!important;
-    background: #9CF !important;
-    border: 0!important;
-    padding: 2px 4px !important;
-    -webkit-border-top-left-radius: 3px;
+    margin:                          0 1px !important;
+    background:                      #9CF !important;
+    border:                          0 !important;
+    padding:                         2px 4px !important;
+    -webkit-border-top-left-radius:  3px;
     -webkit-border-top-right-radius: 3px;
-    -moz-border-radius-topleft: 3px;
-    -moz-border-radius-topright: 3px;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
+    -moz-border-radius-topleft:      3px;
+    -moz-border-radius-topright:     3px;
+    border-top-left-radius:          3px;
+    border-top-right-radius:         3px;
 }
 
 .com-google-gerrit-client-change-RelatedChanges-RelatedChangesCss-tabPanel .gwt-TabBarItem .gwt-Label {
@@ -358,15 +358,11 @@ div.menuBarUserNamePanel {
 
 .com-google-gerrit-client-change-RelatedChanges-RelatedChangesCss-tabPanel .gwt-TabBarItem-selected {
     background: #FFFF80 !important;
-    outline: none;
+    outline:    none;
 }
 
 .com-google-gerrit-client-change-RelatedChanges-RelatedChangesCss-tabPanel .gwt-TabBarItem-selected .gwt-Label {
     color: #000 !important;
-}
-
-.accountLinkPanel .gwt-Image {
-    display: none;
 }
 
 .com-google-gerrit-client-change-Message_BinderImpl_GenCss_style-avatar {
@@ -430,12 +426,6 @@ div.suggestPopupContent table {
     background: #333;
 }
 
-/* Table Element Styles */
-table.screenHeader {
-    margin: 3px auto 8px auto;
-    width:  990px;
-}
-
 #change_infoTable .gwt-InlineHyperlink {
     color:         #EEE;
     display:       inline-block;
@@ -467,7 +457,9 @@ table.changeTable {
 }
 
 table.changeTable .activeRow,
+table.changeTable .activeRow td,
 table.changeTable.accountDashboard .activeRow,
+table.changeTable.accountDashboard.changeTable .activeRow td,
 table.changeTable.accountDashboard.changeTable .activeRow a,
 .com-google-gerrit-client-change-RelatedChanges-RelatedChangesCss-activeRow {
     background: #154A82 !important;
@@ -477,8 +469,60 @@ table.changeTable.accountDashboard.changeTable .activeRow a,
     background: transparent !important;
 }
 
-.accountDashboard.changeTable tr {
-    color: #DDD;
+table.changeTable td.cSIZE {
+    width: 46px;
+}
+
+table.changeTable td.iconCell,
+table.changeTable td.dataCell {
+    border-bottom: 1px solid #222;
+    border-left:   0;
+    border-right:  0;
+}
+
+table.changeTable td:last-child {
+    border-right: 1px solid #E5E5E5 !important;
+}
+
+table.changeTable tbody tr:first-child td {
+    background:    #444;
+    border:        0 !important;
+    border-bottom: 1px solid #555 !important;
+    border-top:    1px solid #555 !important;
+    color:         #CCC;
+    padding:       3px 12px;
+    text-shadow:   1px 1px #000;
+    font-weight:   bold;
+}
+
+table.changeTable tbody tr:first-child td:last-child {
+    border-radius: 0 3px 0 0;
+    border-right:  1px solid #444 !important;
+    padding-right: 10px;
+}
+
+table.changeTable tbody tr:first-child td:first-child {
+    border-radius: 3px 0 0 0;
+    border-left:   1px solid #444 !important;
+    padding-left:  10px;
+}
+
+table.changeTable a.gwt-InlineHyperlink,
+table.changeTable a.gwt-Anchor {
+    color: #CCC !important;
+}
+
+table.changeTable td:last-child {
+    border-right: none !important
+}
+
+table.changeTable td {
+    border:     none;
+    background: #222;
+}
+
+table.changeTable tr {
+    border: 1px #444 solid;
 }
 
 .com-google-gerrit-client-change-ChangeScreen_BinderImpl_GenCss_style-label_need {
@@ -489,58 +533,16 @@ table.changeTable.accountDashboard.changeTable .activeRow a,
     color: #3FCC00;
 }
 
-table.changeTable td.cSIZE {
-    width: 46px;
+.accountDashboard.changeTable tr {
+    color: #DDD;
 }
 
-table.changeTable td.dataCell {
-    border-bottom: 1px solid #222;
-    border-left:   1px solid #222;
-    border-right:  0;
+.accountDashboard.changeTable .needsReview,
+.accountDashboard.changeTable .needsReview a {
+    color: #FFF;
 }
 
-table.changeTable td:last-child {
-    border-right: 1px solid #E5E5E5 !important;
-}
-
-table.changeTable tbody tr:first-child td {
-    background:    #222 !important;
-    border:        0 !important;
-    border-bottom: 1px solid #555 !important;
-    border-top:    1px solid #555 !important;
-    color:         #CCC;
-    padding:       12px 0;
-    text-shadow:   1px 1px #000;
-    font-weight:   bold;
-}
-
-table.changeTable tbody tr:first-child td:last-child {
-    border-radius: 0 3px 0 0;
-    border-right:  1px solid #E5E5E5 !important;
-    padding-right: 10px;
-}
-
-table.changeTable tbody tr:first-child td.dataHeader:nth-child(5) {
-    overflow:    hidden;
-    text-indent: -1000px;
-    width:       20px;
-}
-
-table.changeTable tbody tr:first-child td.dataHeader:nth-child(4) {
-    overflow:    hidden;
-    text-indent: -1000px;
-}
-
-table.changeTable tbody tr:first-child td:first-child {
-    border-left:   1px solid #E5E5E5 !important;
-    border-radius: 3px 0 0 0;
-    padding-left:  10px;
-}
-
-.changeTable a.gwt-InlineHyperlink, .changeTable a.gwt-Anchor {
-    color: #CCC !important;
-}
-
+.accountDashboard tbody tr:first-child td.iconHeader,
 .accountDashboard tbody tr:first-child td.dataHeader {
     background:  transparent !important;
     border:      1px solid transparent !important;
@@ -578,19 +580,22 @@ table.changeTable tbody tr:first-child td:first-child {
     width: 124px;
 }
 
-.accountDashboard tbody tr:first-child td.dataHeader:nth-child(4) {
-    display: none;
+.accountDashboard tbody tr:first-child td.dataHeader:nth-child(5) {
+    width: 70px;
 }
 
 td.sectionHeader,
-table.changeTable.accountDashboard td.sectionHeader:last-child {
-    background:   #333 !important;
-    border-right: 0 !important;
-    border-top:   10px solid #111 !important;
-    padding:      0 !important;
-    position:     relative;
-    color:        #EEE !important;
-    font-weight:  bold;
+table.accountDashboard.changeTable td.sectionHeader:last-child {
+    background:     #333 !important;
+    border-right:   0 !important;
+    border-top:     10px solid #111 !important;
+    padding-top:    4px;
+    padding-right:  6px;
+    padding-bottom: 4px;
+    padding-left:   6px;
+    position:       relative;
+    color:          #DDD !important;
+    font-weight:    bold;
 }
 
 td.sectionHeader a {
@@ -646,11 +651,6 @@ td.dataCell:nth-child(8) a {
     width:         175px;
 }
 
-td.iconCell,
-td.iconHeader {
-    display: none;
-}
-
 td.cAPPROVAL div.gerrit-state-minus-two:before {
     content:     '\f126';
     font-family: 'FontAwesome';
@@ -662,13 +662,9 @@ td.cAPPROVAL div.gerrit-state-plus-two:before {
 }
 
 td.cSTATUS {
-    max-width:     0px !important;
-    overflow:      hidden;
-    position:      relative;
-    text-align:    right;
-    text-indent:   100px;
-    text-overflow: clip;
-    width:         15px !important;
+    overflow:   hidden;
+    position:   relative;
+    text-align: left;
 }
 
 .dataCell.cAPPROVAL {
@@ -685,8 +681,8 @@ img[src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAo
     content: url("data:image/png;base64,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");
 }
 
-td.cSTATUS:after {
-    background:    #6CC644;
+td.cSTATUS:empty:after {
+    background:    #145DD1;
     border-radius: 3px;
     color:         #FFF;
     content:       '\f126';
@@ -696,13 +692,13 @@ td.cSTATUS:after {
     padding:       2px;
     position:      absolute;
     right:         2px;
-    text-indent:   -100px;
     top:           2px;
     width:         16px;
+    text-align:    center
 }
 
-td.cSTATUS.gerrit-status-abandoned:after {
-    background: #FC6D26;
+td.cSTATUS:empty:after {
+    background: #6CC644;
 }
 
 td.cSTATUS.gerrit-status-conflict:after {
@@ -1339,18 +1335,22 @@ div.com-google-gerrit-client-diff-CommentBox-Style-summary {
     width: 62%;
 }
 
-.cm-s-midnight .com-google-gerrit-client-diff-CommentBox-Style-message,
-.cm-s-night .com-google-gerrit-client-diff-CommentBox-Style-message,
-.cm-s-twilight .com-google-gerrit-client-diff-CommentBox-Style-message,
+.cm-s-midnight .com-google-gerrit-client-diff-CommentBox-Style-date,
+.cm-s-night .com-google-gerrit-client-diff-CommentBox-Style-date,
+.cm-s-twilight .com-google-gerrit-client-diff-CommentBox-Style-date,
 div.com-google-gerrit-client-diff-CommentBox-Style-date {
     right: 10px;
     top:   6px;
-    color: #FFF;
+    color: #EEE;
 }
 
+.cm-s-midnight .com-google-gerrit-client-diff-CommentBox-Style-message,
+.cm-s-night .com-google-gerrit-client-diff-CommentBox-Style-message,
+.cm-s-twilight .com-google-gerrit-client-diff-CommentBox-Style-message,
 div.com-google-gerrit-client-diff-CommentBox-Style-message {
     border-top: 1px solid #DDE4E6;
     padding:    10px;
+    color:      #FFF;
 }
 
 div.com-google-gerrit-client-diff-CommentBox-Style-contents {
@@ -1599,6 +1599,11 @@ table.sideBySideScreenLinkTable td:nth-child(4) a.gwt-InlineHyperlink:before {
     vertical-align: bottom;
 }
 
+/* Table Element Styles */
+table.screenHeader {
+    margin-left: 10px;
+}
+
 table.screenHeader td:nth-child(4) a.gwt-Anchor,
 div.reviewedPanelBottom a {
     display: none;
@@ -1702,4 +1707,21 @@ div.commentPanelMessage {
 
 .cm-s-midnight span.cm-tag {
     color: #88D;
+}
+
+.infoBlock td {
+    border: none;
+}
+
+.infoBlock td.bottomheader,
+.infoBlock td.topmost {
+    border: none;
+}
+
+.infoBlock td.header {
+    background: #222;
+}
+
+.addBranch {
+    background-color: transparent;
 }
