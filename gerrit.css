@@ -1,5 +1,5 @@
 /*
- * DarkGerrit v1.0.0
+ * DarkGerrit v1.0.2
  *
  * Created by Jason Watt <jasoncwatt@gmail.com>
  * https://github.com/jasonwatt/DarkGerrit
@@ -372,7 +372,6 @@ div.menuBarUserNamePanel {
 .com-google-gerrit-client-change-Message_BinderImpl_GenCss_style-avatar {
     display: none;
 }
-
 
 /* Popups and Menus */
 div.userInfoPopup,
@@ -1340,9 +1339,13 @@ div.com-google-gerrit-client-diff-CommentBox-Style-summary {
     width: 62%;
 }
 
+.cm-s-midnight .com-google-gerrit-client-diff-CommentBox-Style-message,
+.cm-s-night .com-google-gerrit-client-diff-CommentBox-Style-message,
+.cm-s-twilight .com-google-gerrit-client-diff-CommentBox-Style-message,
 div.com-google-gerrit-client-diff-CommentBox-Style-date {
     right: 10px;
     top:   6px;
+    color: #FFF;
 }
 
 div.com-google-gerrit-client-diff-CommentBox-Style-message {
