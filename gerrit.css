@@ -1363,6 +1363,11 @@ div.com-google-gerrit-client-diff-CommentBox-Style-contents * {
     font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, 'FontAwesome', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !important;
 }
 
+/* code block in comments */
+span.com-google-gwtexpui-safehtml-client-SafeHtmlCss-wikiPreFormat {
+    font-family: monospace  !important;
+}
+
 div.com-google-gerrit-client-diff-CommentBox-Style-contents > div:last-child {
     border-top: 1px solid #333;
     padding:    10px;
